@@ -19,8 +19,8 @@ jobs:
         with:
           images: liondadev/node-thing
           tags: |
-            type=semver|pattern={{version}}
-            type=semver|pattern={{major}}.{{minor}}
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
       - name: Build & publish
         uses: docker/build-push-action@v4
         with:
